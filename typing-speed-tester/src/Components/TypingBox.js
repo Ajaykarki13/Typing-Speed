@@ -70,7 +70,7 @@ const resetTest = ()=>{
 
 const resetWordSpanRefClassname = () =>{
     wordsSpanRef.map(i=> {
-        Array.from(i.current.childNodes).map(j=>{
+        Array.from(i.current.childNodes).map(j=>{ //convert childnodes to array using aray.from
             j.className='';
         })  //convert nodelist to array first for the iteration
 });
@@ -200,6 +200,8 @@ resetTest()   ;
 ////////////
   return (
     <div>
+                    <UpperMenu countDown={countDown}/>
+
         {(testEnd)?(
              <Stats  
         wpm={calculateWPM()}
@@ -211,7 +213,6 @@ resetTest()   ;
          />
           ):(
             <>
-            <UpperMenu countDown={countDown}/>
         <div className='type-box' onClick={focusInput}>
             <div className='words'>
                 {

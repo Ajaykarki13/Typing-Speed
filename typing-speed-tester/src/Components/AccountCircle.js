@@ -8,6 +8,11 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
+import GoogleButton from 'react-google-button';
+import { toast } from 'react-toastify';
+import {signInWithPopup, GoogleAuthProvider} from 'firebase/auth' ;
+import { auth } from '../firebaseConfig';
+
 
 export const AccountCircle = () => {
 
@@ -17,6 +22,36 @@ export const AccountCircle = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const handleValueChange = (e,v) => setValue(v) ;
+
+  const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogle = () => {
+      signInWithPopup(auth,googleProvider).then((res)=>{
+        toast.success('🦄 Login successful', {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
+      }).catch((err)=>
+      {
+      toast.error('Login Failed', {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      }
+      )
+    }
 
   return (
     <div>
@@ -35,8 +70,11 @@ export const AccountCircle = () => {
     </AppBar>
     {value === 0 && <LoginForm/>}
     {value === 1 && <SignupForm/>}
-    </div>
+    <GoogleButton  style={{width:'100%'}}
+    onClick={handleGoogle} /> 
 
+    </div>
+  
 </Modal>
 
     </div>

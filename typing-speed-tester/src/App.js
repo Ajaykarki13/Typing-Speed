@@ -1,30 +1,23 @@
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Header from "./Components/Header";
-import TypingBox from "./Components/TypingBox";
 import { GlobalStyles } from "./Styles/global";
-
-
+import { Routes, Route } from 'react-router';
+import HomePage from './Pages/HomePage';
+import UserPage from './Pages/UserPage';
 
 function App() {
-
-  
 
   return (
     <>
 <ToastContainer />
-    <div className="canvas">
-
     <GlobalStyles />
 
-<Header/>
-      <TypingBox/>
-
-      <div>Footer</div> 
-
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage />}  />
+      <Route path='/user' element={<UserPage />}  />
+      </Routes>
+      
     </>
   );
 }
-
 export default App;

@@ -7,7 +7,7 @@ import {toast} from 'react-toastify' ;
 
 
 
-const SignupForm = () => {
+const SignupForm = ({handleClose}) => {
 
     const[email,setEmail] = useState('') ;
     const[password,setPassword] = useState('')
@@ -53,6 +53,7 @@ const SignupForm = () => {
                         progress: undefined,
                         theme: "light",
                         });
+                        handleClose();
                 }).catch((err)=>toast.error('🦄 Invalid credentials!', {
                     position: "top-right",
                     autoClose: 4000,

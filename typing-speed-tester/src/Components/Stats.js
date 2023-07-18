@@ -25,7 +25,7 @@ const Stats = (
         theme: "dark",
         });
     }
-  },[])
+  })
 
 
   /// pushing data/results to database 

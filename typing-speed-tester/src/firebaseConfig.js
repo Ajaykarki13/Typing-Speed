@@ -15,7 +15,7 @@ const firebaseConfig = {
 
   // initialize firebase application and connect firebase to react application
 
-  const firebaseApp = firebase.initializeApp(firebaseConfig) ; 
+  firebase.initializeApp(firebaseConfig) ; 
 
   //  objects
 const auth  = firebase.auth();  // for authentication of app

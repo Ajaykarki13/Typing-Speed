@@ -38,7 +38,7 @@ useEffect(()=>{
   if(!loading && !user){
     navigate('/');
   }
-},[loading]) ;
+}) ;
 
 //loader 
 if(loading){

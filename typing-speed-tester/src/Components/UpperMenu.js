@@ -14,7 +14,7 @@ function UpperMenu({countDown}) {
     <div className='upper-menu'>
 
     <div className='counter'>
-{countDown}
+     00:{countDown}s
     </div>
     <div className='modes'>
 <div className='test-mode' id={15} onClick={updateTime}>15s</div>

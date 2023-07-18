@@ -9,7 +9,7 @@ const HomeButton = () => {
     <div className='homebutton' style={{
      display:'flex', justifyContent:'flex-start',margin:'2rem 0 0 1.5rem'
     }}>
-        <HomeTwoToneIcon style={{transform:'scale(3)'}} onClick={()=> navigate('/')} />
+        <HomeTwoToneIcon style={{transform:'scale(2.5)',cursor:'pointer'}} onClick={()=> navigate('/')} />
     </div>
   )
 }

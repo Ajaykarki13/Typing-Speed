@@ -11,7 +11,7 @@ function TypingBox() {
     const [ wordsArray, setWordsArray ] = useState(generate(50));
     
 
-    const inputRef = useRef(null);
+    const inputRef = useRef(0);
     const{testTime} = useTestMode();
     const[countDown,setCountDown] = useState(testTime)
 const[testStart,setTestStart] =useState(false);
@@ -69,8 +69,8 @@ const resetTest = ()=>{
 //to reset wordspan ref to rest whatever we have typed
 
 const resetWordSpanRefClassname = () =>{
-    wordsSpanRef.map(i=> {
-        Array.from(i.current.childNodes).map(j=>{ //convert childnodes to array using aray.from
+    wordsSpanRef.forEach(i=> {
+        Array.from(i.current.childNodes).forEach(j=>{ //convert childnodes to array using aray.from
             j.className='';
         })  //convert nodelist to array first for the iteration
 });
@@ -185,17 +185,18 @@ const calculateAcc = () => {
 }
 //////
     const focusInput =()=>{ 
-
         inputRef.current.focus();
     }
 //whenever test time changes this useeffect will run
     useEffect(()=>{
 resetTest()   ; 
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[testTime])
 //////////////
     useEffect(()=>{
         focusInput();
         wordsSpanRef[0].current.childNodes[0].className = 'current';
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]) 
 ////////////
   return (

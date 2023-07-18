@@ -29,10 +29,10 @@ const TableUserData = ({data}) => {
  data.map((t,i)=>(
     <TableRow>
         <TableCell style={styles}>{i+1}</TableCell>
-        <TableCell key= {t.timeStamp} style={styles}>{t.wpm}</TableCell>
-        <TableCell key= {t.timeStamp} style={styles}>{t.accuracy}</TableCell>
-        <TableCell key= {t.timeStamp} style={styles}>{t.characters}</TableCell>
-        <TableCell key= {t.timeStamp} style={styles}>{t.timeStamp.toDate().toLocaleString()}</TableCell>
+        <TableCell key= {i} style={styles}>{t.wpm}</TableCell>
+        <TableCell key= {i} style={styles}>{t.accuracy}</TableCell>
+        <TableCell key= {i} style={styles}>{t.characters}</TableCell>
+        <TableCell key= {i} style={styles}>{t.timeStamp.toDate().toLocaleString()}</TableCell>
     </TableRow>
 
 

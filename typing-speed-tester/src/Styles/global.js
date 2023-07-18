@@ -126,10 +126,10 @@ body{
     color:yellow;
 }
 .header{
-    width:1000px;
+    width:100%;
     display:flex;
     justify-content:space-between;
-  margin-left:auto;
+     margin-left:auto;
     margin-right:auto;
 }
 
@@ -144,4 +144,34 @@ body{
     align-items:center;
 }
 
+.logo {
+    cursor:pointer;
+    font-size: 35px;
+    font-style:italic;
+    font-weight: bold;
+    font-family: Cursive,Brush Script MT ;
+    color: indigo;
+    background-color: #f0f0f0; 
+    padding: 10px 10px; 
+    border-radius: 5px; 
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.3); 
+    animation: logo 3s infinite;
+    margin-top:-0.5rem;
+    @keyframes logo {
+        0% {
+          text-shadow: 0 0 10px #007bff; /* Start with a light glow */
+        }
+        50% {
+          text-shadow: 0 0 20px #007bff; /* Increase the glow */
+        }
+        100% {
+          text-shadow: 0 0 10px #007bff; /* Go back to the initial glow */
+        }
+      }
+  }
+
+  .footer-icon{
+    margin-left:5%;
+  }
+  
 `

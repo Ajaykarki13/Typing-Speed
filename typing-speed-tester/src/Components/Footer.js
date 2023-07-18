@@ -1,24 +1,19 @@
 
+ import Share from './Share';
 import React from 'react'
 
-const Footer = () => {
 
-
-
-
-
+function Footer() {
   return (
-    <div className='footer'>
-
-    <div className='links'>Links</div>
-
+    <>
+    
+    <hr/>
+    <div className='footer-icon'>
+      <Share />
+        </div>
    
-
-    </div>
-
-
-
+   </>
   )
 }
 
-export default Footer ;
+export default Footer;

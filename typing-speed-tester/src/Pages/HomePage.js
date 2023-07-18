@@ -6,7 +6,7 @@ import TypingBox from "../Components/TypingBox";
 
 const HomePage = () => {
   return (
-    <div>
+   
            <div className="canvas">
 <Header/>
       <TypingBox/>
@@ -14,7 +14,7 @@ const HomePage = () => {
       <div>Footer</div> 
 
     </div>
-    </div>
+    
   )
 }
 

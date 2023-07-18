@@ -4,6 +4,9 @@ import { db,auth } from '../firebaseConfig';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router';
 import { CircularProgress } from '@mui/material';
+import TableUserData from '../Components/TableUserData';
+import UserInfo from '../Components/UserInfo';
+import HomeButton from '../Components/HomeButton';
 
 const UserPage = () => {
 
@@ -39,12 +42,19 @@ useEffect(()=>{
 
 //loader 
 if(loading){
-  return <CircularProgress />
+  return <div className='center-screen'>
+      <CircularProgress size={200}/>
+  </div>
 }
 
  return (
-    <div>
-USERPAGE
+  <div>
+    <HomeButton />
+    <div className='canvas'> 
+    <UserInfo totalTestsTaken={data.length}/>
+  <TableUserData data={data}/>
+
+</div>
 </div>
   )
 }

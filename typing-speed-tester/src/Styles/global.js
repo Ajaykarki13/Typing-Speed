@@ -132,8 +132,16 @@ body{
   margin-left:auto;
     margin-right:auto;
 }
-.user-icon{
-    
+
+.info{
+    margin-top:1rem;
+    font-size: 1.5rem;
+}
+.center-screen{
+    margin-top:20%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 
 `

@@ -103,8 +103,9 @@ export const AccountCircle = () => {
   return (
     <div>
    
-<AccountCircleTwoToneIcon onClick={handleOpen} />
-{ user && <LogoutIcon onClick={handleLogout}/> }
+<AccountCircleTwoToneIcon onClick={handleOpen} style={{transform:'scale(1.5)',marginRight:'1.5rem' }}/>
+
+{ user && <LogoutIcon onClick={handleLogout} style={{transform:'scale(1.5)'}}/> }
 
 <Modal open={open}   onClose={handleClose}
  style= {{display:'flex',justifyContent:'center',alignItems:'center'}}>
